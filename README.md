@@ -1,4 +1,4 @@
 edx-theme
 =========
+Thème utilisé pour edX - EDUlib
 
-Theme utilise pour edX - EDUlib
