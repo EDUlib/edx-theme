@@ -1,0 +1,17 @@
+//-----------------
+//  Banniere ecoles affiliees
+//-----------------
+
+section.container ul.partenaires-wrapper {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0 !important;
+    padding-bottom: 40px !important;
+    text-align: center !important;
+}
+
+section.container ul.partenaires-wrapper li.partenaires-item {
+    display: inline-block;
+    width: 185px;
+}
