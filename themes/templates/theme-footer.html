@@ -1,0 +1,46 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+<%! from datetime import datetime %>
+<%! from pytz import UTC %>
+
+
+<div class="wrapper-all-footer">
+
+<footer class="partners-footer">
+    <nav>
+        <ul>
+          <li>
+            <a href="http://www.umontreal.ca"><img src="${static.url('themes/default/images/logos/udem.png')}" alt="Universit&eacute; de Montr&eacute;al" width="185" height="48" /></a>
+          </li>
+          <li>
+            <a href="http://www.hec.ca"><img src="${static.url('themes/default/images/logos/hec.png')}" alt="HEC Montr&eacute;al" width="185" height="48" /></a>
+          </li>
+          <li>
+            <a href="http://www.polymtl.ca"><img src="${static.url('themes/default/images/logos/poly.png')}" alt="&Eacute;cole Polytechnique de Montr&eacute;al" width="185" height="48" /></a>
+          </li>
+        </ul>
+	</nav>
+</footer>
+
+
+<div class="wrapper-footer">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+        <ol>
+          <li><a href="${marketing_link('TOS')}">Conditions d&#8217;utilisation</a></li>
+          <li><a href="${marketing_link('TOS')}#privacy">Politique de vie priv&eacute;e</a></li>
+          <li><a href="${marketing_link('TOS')}#copyright">Droit d&#8217;auteur</a></li>
+          <li><a href="${marketing_link('HONOR')}">Code d&#8217;honneur</a></li>
+          <li><a href="${marketing_link('ABOUT')}">&Agrave; propos</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="references">
+      <span><a href="http://code.edx.org"><img src="${static.url('themes/default/images/edx-openedx-logo-tag.png')}" alt="Propuls&eacute; par OpenEdx" width="155" height="52" /></a></span>
+    </div>
+  </footer>
+</div>
+
+</div>
