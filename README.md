@@ -54,4 +54,3 @@ exit
 sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
 sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp_worker:
 
-
