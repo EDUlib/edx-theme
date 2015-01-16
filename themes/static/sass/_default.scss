@@ -317,5 +317,4 @@ section.about ol ul {list-style-type: circle;}
 
 .register aside {margin-top: -90px;}
 
-.view-register .form-actions button[type="submit"], .view-login .form-actions button[type="submit"], .view-passwordreset .form-actions button[type="submit"] {font-family: $sans-serif;}
-
+.instructions, .view-register .form-actions button[type="submit"], .view-login .form-actions button[type="submit"], .view-passwordreset .form-actions button[type="submit"] {font-family: $sans-serif !important;}
