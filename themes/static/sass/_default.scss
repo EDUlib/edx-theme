@@ -311,5 +311,11 @@ section.about ol ul {list-style-type: circle;}
 //  Page d'inscription
 //-----------------
 
+.view-register .introduction header .title .title-sub, .view-login .introduction header .title .title-sub, .view-passwordreset .introduction header .title .title-sub {margin-left: 0px;}
+
+.view-register .introduction header .title .title-sub {text-transform: none;}
+
+.register aside {margin-top: -90px;}
+
 .view-register .form-actions button[type="submit"], .view-login .form-actions button[type="submit"], .view-passwordreset .form-actions button[type="submit"] {font-family: $sans-serif;}
 
