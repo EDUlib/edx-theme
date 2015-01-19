@@ -1,0 +1,30 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="base.html" />
+<%! from django.core.urlresolvers import reverse %>
+<%block name="bodyclass">error</%block>
+<%block name="title">
+  % if error == '404':
+    404 - Page non trouv&eacute;e"
+  % elif error == '500':
+    500 - Erreur interne du serveur
+  % endif
+</%block>
+
+<%block name="content">
+  <article class="error-prompt">
+    % if error == '404':
+      <h1>La page demand&eacute;e n&#8217;a pas &eacute;t&eacute; trouv&eacute;e</h1>
+      <p class="description">${_("Nous sommes d&eacute;sol&eacute;s. La page que vous cherchiez n&#8217;a pas &eacute;t&eacute; trouv&eacute;e. Vous pouvez retourner &agrave; au tableau de bord du Studio et réessayer. Si vous &eacute;prouvez toujours des difficult&eacute;s &agrave; acc&eacute;der &agrave; certaines ressources, veuillez  {link_start}contacter le support du Studio{link_end} pour de l&#8217;aide additionnelle.").format(
+          link_start='<a href="http://help.edge.edx.org/discussion/new" class="show-tender" title="{title}">'.format(title=_("Use our feedback tool, Tender, to share your feedback")),
+          link_end='</a>',
+        )}</p>
+    % elif error == '500':
+      <h1>Le serveur a rencontr&eacute; une erreur</h1>
+      <p class="description">${_("Nous sommes d&eacute;sol&eacute;s. Un problème est survenu avec le serveur en essayant d&#8217;accéder à votre requête. Vous pouvez retourner &agrave; au tableau de bord du Studio et réessayer. Si vous &eacute;prouvez toujours des difficult&eacute;s &agrave; acc&eacute;der &agrave; certaines ressources, veuillez  {link_start}contacter le support du Studio{link_end} pour de l&#8217;aide additionnelle.").format(
+          link_start='<a href="http://help.edge.edx.org/discussion/new" class="show-tender" title="{title}">'.format(title=_("Use our feedback tool, Tender, to share your feedback")),
+          link_end='</a>',
+        )}</p>
+    % endif
+    <a href="/" class="back-button">Retour au tableau de bord</a>
+  </article>
+</%block>
