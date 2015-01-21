@@ -317,4 +317,4 @@ section.about ol ul {list-style-type: circle;}
 
 .register aside {margin-top: -90px;}
 
-.instructions, .view-register .form-actions button[type="submit"], .view-login .form-actions button[type="submit"], .view-passwordreset .form-actions button[type="submit"] {font-family: $sans-serif !important;}
+html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instructions {font-family: $sans-serif !important;}
