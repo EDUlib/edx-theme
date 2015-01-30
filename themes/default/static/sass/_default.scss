@@ -298,8 +298,22 @@ footer.partners-footer a, div.references a {
 //  Page d'accueil
 //-----------------
 
-section.home header {height: 345px;}
+//  Redimensionnement de la bannière d'accueil
+section.home header {height: 250px;}
+.find-courses header.search, .university-profile header.search {height: 323px;}
+
 section.home header div.outer-wrapper {padding: 90px 10px 0px;}
+.find-courses header.search .inner-wrapper, .university-profile header.search .inner-wrapper {padding-top: 150px;}
+
+//  Fixe une largeur minimale aux images des cours
+.highlighted-courses .courses .course .info .cover-image img, .find-courses .courses .course .info .cover-image img  {min-width: 355px;}
+
+//  Décalement de l'étiquette Nouveau
+.highlighted-courses .courses .course header.course-preview, .find-courses .courses .course header.course-preview {height: 60px;}
+.highlighted-courses .courses .course header.course-preview hgroup, .find-courses .courses .course header.course-preview hgroup {padding: 10px 10px;}
+.highlighted-courses .courses .course header.course-preview .info-link, .find-courses .courses .course header.course-preview .info-link {padding-top: 15px;}
+
+
 
 //-----------------
 //  Page d'accueil sans vidéo
