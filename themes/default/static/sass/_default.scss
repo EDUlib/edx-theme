@@ -211,6 +211,29 @@ $video-thumb-url: '../themes/default/images/edulib_video.png';
 }
 
 //-----------------
+//  Correctifs
+//-----------------
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 1em;}
+h5 {font-size: 0.8em;}
+h6 {font-size: 0.5em;}
+
+html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instructions {font-family: $sans-serif !important;}
+
+
+
+//-----------------
+//  Menu du haut
+//-----------------
+
+
+
+
+
+//-----------------
 //  Pied de page
 //	Source: http://css-tricks.com/snippets/css/sticky-footer/
 //-----------------
@@ -317,4 +340,3 @@ section.about ol ul {list-style-type: circle;}
 
 .register aside {margin-top: -90px;}
 
-html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instructions {font-family: $sans-serif !important;}
