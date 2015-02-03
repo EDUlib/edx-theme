@@ -299,10 +299,9 @@ footer.partners-footer a, div.references a {
 //-----------------
 
 //  Redimensionnement de la bannière d'accueil
-section.home header {height: 250px;}
-.find-courses header.search, .university-profile header.search {height: 323px;}
+section.home header, .find-courses header.search, .university-profile header.search {height: 325px;}
 
-section.home header div.outer-wrapper {padding: 90px 10px 0px;}
+section.home header div.outer-wrapper {padding: 150px 10px 0px;}
 .find-courses header.search .inner-wrapper, .university-profile header.search .inner-wrapper {padding-top: 150px;}
 
 //  Fixe une largeur minimale aux images des cours
