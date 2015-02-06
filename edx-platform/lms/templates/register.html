@@ -95,8 +95,8 @@
 <section class="introduction">
   <header>
     <h1 class="title">
-      <span class="title-super">${_("Welcome!")}</span>
-      <span class="title-sub">${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</span>
+      <span class="title-super">Bienvenue!</span>
+      <span class="title-sub">Inscrivez-vous ci-dessous pour cr&eacute;er votre compte EDU<em>lib</em>.</span>
     </h1>
   </header>
 </section>
@@ -155,7 +155,7 @@
 
       <p class="instructions">
         ${_("Please complete the following fields to register for an account. ")}<br />
-        ${_('Required fields are noted by <strong class="indicator">bold text and an asterisk (*)</strong>.')}
+        Les champs requis sont indiqu&eacute;s par <strong class="indicator">des caract&egrave;res gras et un ast&eacute;risque (*)</strong>.')}
       </p>
 
       % endif
@@ -174,7 +174,7 @@
           <li class="field required text" id="field-name">
             <label for="name">${_('Full Name')}</label>
             <input id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip" />
-            <span class="tip tip-input" id="name-tip">${_("Needed for any certificates you may earn")}</span>
+            <span class="tip tip-input" id="name-tip">N&eacute;cessaire pour tout certificat que vous pourriez obtenir.</span>
           </li>
           <li class="field required text" id="field-username">
             <label for="username">${_('Public Username')}</label>
@@ -211,7 +211,7 @@
           % if ask_for_email:
 
           <li class="field required text" id="field-email">
-            <label for="email">${_("E-mail")}</label>
+            <label for="email">Courriel</label>
             <input class="" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" />
           </li>
 
@@ -220,7 +220,7 @@
           <li class="field required text" id="field-username">
             <label for="username">${_('Public Display Name')}</label>
             <input id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip" />
-            <span class="tip tip-input" id="id="username-tip>${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
+            <span class="tip tip-input" id="id="username-tip>Sera visible dans toute discussion ou tout forum auquel vous participerez <strong>(ne pourra pas &ecirc;tre modifi&eacute; ult&eacute;rieurement).</strong></span>
           </li>
 
           % if ask_for_fullname:
@@ -228,7 +228,7 @@
           <li class="field required text" id="field-name">
             <label for="name">${_('Full Name')}</label>
             <input id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip" />
-            <span class="tip tip-input" id="name-tip">${_("Needed for any certificates you may earn")}</span>
+            <span class="tip tip-input" id="name-tip">N&eacute;cessaire pour tout certificat que vous pourriez obtenir.</span>
           </li>
 
           % endif

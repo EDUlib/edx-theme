@@ -1,0 +1,31 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%! from django.core.urlresolvers import reverse %>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<section class="container activation">
+
+  <section class="message">
+    %if not already_active:
+      <h1 class="valid">Activation compl&eacute;t&eacute;e!</h1>
+    %else:
+      <h1>Compte d&eacute;j&agrave; activ&eacute;!</h1>
+    %endif
+    <hr class="horizontal-divider">
+
+    <p>
+      %if not already_active:
+        Merci d&#8217;avoir activ&eacute; votre compte.
+      %else:
+        Votre compte a d&eacute;j&agrave; &eacute;t&eacute; activ&eacute;.
+      %endif
+
+      %if user_logged_in:
+        ${_("Visitez votre {link_start}tableau de bord{link_end} pour voir vos cours.").format(link_start='<a href="{url}">'.format(url=reverse('dashboard')), link_end='</a>')}
+      %else:
+        ${_("Vous pouvez désormais {link_start}vous connecter{link_end}.").format(link_start='<a href="{url}">'.format(url=reverse('signin_user')), link_end='</a>')}
+      %endif
+    </p>
+  </section>
+</section>
