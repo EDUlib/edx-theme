@@ -226,11 +226,10 @@ html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instruct
 
 
 //-----------------
-//  Menu du haut
+//  Page d'accueil des cours
 //-----------------
 
-
-
+.course-info .container nav, .course-info section.outside-app nav {display: none;}
 
 
 //-----------------
