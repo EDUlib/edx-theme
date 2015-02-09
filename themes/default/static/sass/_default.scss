@@ -226,13 +226,6 @@ html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instruct
 
 
 //-----------------
-//  Page d'accueil des cours
-//-----------------
-
-.course-info .container nav, .course-info section.outside-app nav {display: none;}
-
-
-//-----------------
 //  Pied de page
 //	Source: http://css-tricks.com/snippets/css/sticky-footer/
 //-----------------
@@ -298,10 +291,13 @@ footer.partners-footer a, div.references a {
 //-----------------
 
 //  Redimensionnement de la bannière d'accueil
-section.home header, .find-courses header.search, .university-profile header.search {height: 325px;}
+section.home header {height: 275px;}
 
-section.home header div.outer-wrapper {padding: 150px 10px 0px;}
-.find-courses header.search .inner-wrapper, .university-profile header.search .inner-wrapper {padding-top: 150px;}
+.find-courses header.search, .university-profile header.search {height: 275px;}
+
+section.home header div.outer-wrapper {padding-top: 110px;}
+
+.find-courses header.search .inner-wrapper, .university-profile header.search .inner-wrapper {padding-top: 110px;}
 
 //  Fixe une largeur minimale aux images des cours
 .highlighted-courses .courses .course .info .cover-image img, .find-courses .courses .course .info .cover-image img  {min-width: 355px;}
@@ -351,4 +347,11 @@ section.about ol ul {list-style-type: circle;}
 .view-register .introduction header .title .title-sub {text-transform: none;}
 
 .register aside {margin-top: -90px;}
+
+
+//-----------------
+//  Page d'accueil des cours
+//-----------------
+
+.course-info .container nav, .course-info section.outside-app nav {display: none;}
 
