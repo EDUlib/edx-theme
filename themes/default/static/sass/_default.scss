@@ -214,6 +214,8 @@ $video-thumb-url: '../themes/default/images/edulib_video.png';
 //  Correctifs
 //-----------------
 
+hmtl {background-color: transparent;}
+
 h1 {font-size: 2em;}
 h2 {font-size: 1.5em;}
 h3 {font-size: 1.2em;}
@@ -237,8 +239,9 @@ html, body {
 }
 
 div.content-wrapper {
-	min-height: 100%;
-	margin-bottom: -201px; 
+    min-height: 100%;
+	margin-bottom: -201px;
+    padding-bottom: 0;
 }
 
 div.content-wrapper:after {

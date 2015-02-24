@@ -9,3 +9,5 @@ edx-platform/lms/templates/courseware/_notes/dwsync.xml
 edx-platform/cms/templates/_notes/dwsync.xml
 
 edx-platform/cms/templates/widgets/_notes/dwsync.xml
+
+edx-platform/lms/templates/wiki/_notes/dwsync.xml
