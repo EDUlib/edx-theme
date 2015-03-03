@@ -232,21 +232,24 @@ html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instruct
 //	Source: http://css-tricks.com/snippets/css/sticky-footer/
 //-----------------
 
-html, body {
-	margin: 0;
-	height: 100%;
-	height: calc(100% - 40px);
+
+html, body, div.window-wrap {
+    margin: 0;
+    height: 100%;
 }
+
+body {height: calc(100% - 77px);}
 
 div.content-wrapper {
     min-height: 100%;
-	margin-bottom: -201px;
+    /* equal to footer height */
+    margin-bottom: -201px;
     padding-bottom: 0;
 }
 
 div.content-wrapper:after {
-	content: "";
-	display: block;
+  content: "";
+  display: block;
 }
 
 div.wrapper-all-footer, div.content-wrapper:after {
@@ -260,6 +263,7 @@ div.wrapper-all-footer {
 div.wrapper-footer {
 	min-height: 55px;
 }
+
 
 
 //-----------------
@@ -359,6 +363,10 @@ section.about ol ul {list-style-type: circle;}
 .view-register .introduction header .title .title-sub {text-transform: none;}
 
 .register aside {margin-top: -90px;}
+
+.view-register .wrapper-footer footer, .view-login .wrapper-footer footer, .view-passwordreset .wrapper-footer footer {
+    width: 100% !important;
+}
 
 
 //-----------------
