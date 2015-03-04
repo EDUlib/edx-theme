@@ -3,13 +3,13 @@ edx-theme
 Thème utilisé pour edX - EDUlib
 
 
-sudo -H -u edxapp bash
-cd /edx/app/edxapp
-git clone https://github.com/EDUlib/edx-theme
-mv themes themes.old
-mv edx-theme themes
-cd themes
-mv themes default
+* sudo -H -u edxapp bash
+* cd /edx/app/edxapp
+* git clone https://github.com/EDUlib/edx-theme
+* mv themes themes.old
+* mv edx-theme themes
+* cd themes
+* mv themes default
 
 placer la section suivante dans /edx/app/edxapp/lms.env.json
     "MKTG_URL_LINK_MAP": {
