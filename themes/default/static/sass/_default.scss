@@ -226,6 +226,13 @@ h6 {font-size: 0.5em;}
 html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instructions {font-family: $sans-serif !important;}
 
 
+header.global .user a.user-link {padding: 5px 10px;}
+header.global .user>.primary:last-child>a {padding: 5px 10px 11px;}
+header.global .user .dropdown-menu {top: 33px;}
+header.global .user .dropdown-menu::before {right: 8px;}
+
+
+
 
 //-----------------
 //  Pied de page
@@ -297,9 +304,13 @@ footer.partners-footer a, div.references a {
 //  Médias sociaux
 //-----------------
 
-div.wrapper-footer div.social-sharing {
-    display: inline-block;
-    margin-right: 50px;
+div.wrapper-footer nav.social-sharing, div.wrapper-footer nav.social-sharing ul {display: inline-block;}
+
+div.wrapper-footer nav.social-sharing ul li {display: inline;}
+
+.wrapper-footer footer .powered-by {
+    width: 150px !important;
+    margin-left: 20px;
 }
 
 //-----------------
@@ -374,4 +385,25 @@ section.about ol ul {list-style-type: circle;}
 //-----------------
 
 .course-info .container nav, .course-info section.outside-app nav {display: none;}
+
+.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro {
+  border-radius: 0;
+  border: 0px solid rgba(255,255,255,0.8);
+  height: 40px;
+  width: 40px;
+  margin-top: 0;
+  margin-left: 0;
+  position: absolute;
+  top: initial;
+  bottom: 0;
+  left: 0;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
+  margin-left: 7px;
+  margin-top: 7px;
+  position: inherit;
+  top: 0;
+  left: 0;
+}
 
