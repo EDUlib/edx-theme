@@ -9,7 +9,7 @@ Thème utilisé pour edX - EDUlib
 * mv themes themes.old
 * mv edx-theme themes
 * cd themes
-* mv themes default
+* mv themes/default default 
 
 placer la section suivante dans /edx/app/edxapp/lms.env.json
     "MKTG_URL_LINK_MAP": {
@@ -21,46 +21,37 @@ placer la section suivante dans /edx/app/edxapp/lms.env.json
         "SCHOOLS" : « schools"
     },
 
-
-* cd /edx/app/edxapp/themes/edx-platform/lms/static/images
-* cp * /edx/app/edxapp/edx-platform/lms/static/images/
-
-* mv /edx/app/edxapp/edx-platform/lms/static/images/bulk_email /edx/app/edxapp/edx-platform/lms/static/images/bulk_email.1
-* mv /edx/app/edxapp/edx-platform/lms/static/images/default-theme /edx/app/edxapp/edx-platform/lms/static/images/default-theme.1
-* mv /edx/app/edxapp/edx-platform/lms/static/images/edx-theme /edx/app/edxapp/edx-platform/lms/static/images/edx-theme.1
-* mv /edx/app/edxapp/edx-platform/lms/static/images/social /edx/app/edxapp/edx-platform/lms/static/images/social.1
-
-* mv bulk_email default-theme edx-theme social /edx/app/edxapp/edx-platform/lms/static/images/
-
-
-* cd /edx/app/edxapp/themes/edx-platform/lms/templates
-* cp index.html /edx/app/edxapp/edx-platform/lms/templates/
-* cp course.html /edx/app/edxapp/edx-platform/lms/templates/
-* cp footer.html /edx/app/edxapp/edx-platform/lms/templates/
-* cp navigation.html /edx/app/edxapp/edx-platform/lms/templates/
-* cp courseware/courses.html /edx/app/edxapp/edx-platform/lms/templates/courseware
-
-* cd /edx/app/edxapp/themes/edx-platform/lms/templates/static_templates
-* cp * /edx/app/edxapp/edx-platform/lms/templates/static_templates/
-
-* cd /edx/app/edxapp/themes/edx-platform/lms/templates/wiki
-* cp * /edx/app/edxapp/edx-platform/lms/templates/wiki
-* cd /edx/app/edxapp/themes/edx-platform/lms/templates/wiki/includes
-* cp * /edx/app/edxapp/edx-platform/lms/templates/wiki/includes
-* cd /edx/app/edxapp/themes/edx-platform/lms/templates/wiki/includes/_notes
-* cp * /edx/app/edxapp/edx-platform/lms/templates/wiki/includes/_notes
-
-* cd /edx/app/edxapp/themes/edx-platform/cms/static/sass
-* cp * /edx/app/edxapp/edx-platform/cms/static/sass
-
-* cd /edx/app/edxapp/themes/edx-platform/cms/templates
-* cp *.html /edx/app/edxapp/edx-platform/cms/templates
-* cd /edx/app/edxapp/themes/edx-platform/cms/templates/widgets
-* cp *.html /edx/app/edxapp/edx-platform/cms/templates/widgets
-
-* cd /edx/app/edxapp/themes/
+* cd /edx/app/edxapp/themes
 * cp server-error.html /edx/app/edxapp/edx-platform/lms/templates/static_templates/server-error.html
 
+* cd /edx/app/edxapp/themes/cms/static/images/edx-theme
+* cp * /edx/app/edxapp/edx-platform/cms/static/images/
+
+* cd /edx/app/edxapp/themes/cms/static/sass
+* cp _base.scss /edx/app/edxapp/edx-platform/cms/static/sass
+* cp  _variables.scss /edx/app/edxapp/edx-platform/cms/static/sass
+* cp elements/_header.scss /edx/app/edxapp/edx-platform/cms/static/sass/elements/
+
+* cd /edx/app/edxapp/themes/cms/templates
+* cp 404.html  500.html  error.html /edx/app/edxapp/edx-platform/cms/templates/
+* cp widgets/* /edx/app/edxapp/edx-platform/cms/templates/widgets/
+
+* cd /edx/app/edxapp/themes/lms/static/images
+* cp bulk_email/* /edx/app/edxapp/edx-platform/lms/static/images/bulk_email
+* cp default-theme/* /edx/app/edxapp/edx-platform/lms/static/images/default-theme
+* mv default-theme/institutions /edx/app/edxapp/edx-platform/lms/static/images/default-theme
+* cp edx.png /edx/app/edxapp/edx-platform/lms/static/images/
+* cp edx-theme/* /edx/app/edxapp/edx-platform/lms/static/images/edx-theme
+* cp edx-theme/_notes/* /edx/app/edxapp/edx-platform/lms/static/images/edx-theme/_notes/
+* cp favicon_edx.ico favicon.ico linkedin_add_to_profile.png logo_bw.png logo.png openedx-logo-tag-dark.png openedx-logo-tag_en.png openedx-logo-tag-light.png openedx-logo-tag.png /edx/app/edxapp/edx-platform/lms/static/images
+* cp social/* /edx/app/edxapp/edx-platform/lms/static/images/social
+* cp social/_notes/* /edx/app/edxapp/edx-platform/lms/static/images/social/_notes/
+
+* cd /edx/app/edxapp/themes/lms/templates
+* cp course.html footer.html index.html main.html navigation.html /edx/app/edxapp/edx-platform/lms/templates/
+* cp courseware/* /edx/app/edxapp/edx-platform/lms/templates/courseware/
+* cp static_templates/* /edx/app/edxapp/edx-platform/lms/templates/static_templates/
+* cp wiki/includes/_notes/* /edx/app/edxapp/edx-platform/lms/templates/wiki/includes/_notes 
 
 
 * source /edx/app/edxapp/edxapp_env
