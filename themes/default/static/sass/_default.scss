@@ -354,7 +354,9 @@ section.home header div.outer-wrapper div.title>hgroup h1 {text-align: center;}
 //  Pages d'information
 //-----------------
 
-section.about p, section.about ul li, section.about ol li {font: normal 1em/1.6em $serif;}
+section.about p, section.about ul li, section.about ol li, section.about span {font: normal 1em/1.6em $serif;}
+
+section.container section.about h1 {margin-top: 1em;}
 
 section.about h3, section.about h4 {margin: 2em 0 1em 0;}
 

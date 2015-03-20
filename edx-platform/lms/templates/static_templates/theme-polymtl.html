@@ -1,0 +1,42 @@
+<%! from django.utils.translation import ugettext as _ %>
+
+<%! from django.core.urlresolvers import reverse %>
+
+<%!
+import courseware.courses as courses
+from django.core.management.base import BaseCommand, CommandError
+from xmodule.modulestore.django import modulestore
+from xmodule.contentstore.django import contentstore
+from opaque_keys.edx.locator import CourseLocator
+%>
+
+<%inherit file="../main.html"/>
+
+<%! from microsite_configuration import microsite %>
+
+<%block name="pagetitle">Polytechnique Montr&eacute;al</%block>
+
+<section class="container">
+
+    <section class="about">
+        <h1>Polytechnique Montr&eacute;al</h1>
+        <p>Reconnue comme leader national en formation et en recherche dans le domaine du g&eacute;nie, l'&Eacute;cole Polytechnique de Montr&eacute;al est, avec 125 ans d'histoire, pionni&egrave;re en formation d'ing&eacute;nieurs francophones en Am&eacute;rique. Elle est aussi l'un des plus importants &eacute;tablissements d'enseignement de g&eacute;nie parmi les &eacute;coles ou facult&eacute;s canadiennes, et demeure la premi&egrave;re au Qu&eacute;bec quant au nombre d'&eacute;tudiants et &agrave; l'ampleur de ses budgets de recherche.</p>
+        <p><a href="http://www.polymtl.ca" onclick="window.open(this.href);return false;">http://www.polymtl.ca</a></p>
+    </section>
+    
+    <section class="highlighted-courses">
+        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+        <section class="courses">
+            <ul class="courses-listing">
+                %for course in modulestore().get_courses():
+                % if not course.has_ended() and course.org.lower() == "polymtl" and course.catalog_visibility=="both":
+                   <li class="courses-listing-item">
+                      <%include file="../course.html" args="course=course" />
+                   </li>
+                % endif
+                %endfor
+            </ul>
+        </section>
+        % endif
+    </section>
+</section>
