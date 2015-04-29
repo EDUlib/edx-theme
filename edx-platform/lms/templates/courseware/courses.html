@@ -1,6 +1,8 @@
 <%! 
   from django.utils.translation import ugettext as _
   from microsite_configuration import microsite
+  from xmodule.modulestore.django import modulestore
+  from xmodule.contentstore.django import contentstore
 %>
 <%inherit file="../main.html" />
 
@@ -47,10 +49,12 @@
   <section class="container">
     <section class="courses">
       <ul class="courses-listing">
-	%for course in courses:
-        <li class="courses-listing-item">
-          <%include file="../course.html" args="course=course" />
-        </li>
+	%for course in sorted(modulestore().get_courses(),key=lambda course: (course.start is None, course.start), reverse=True):
+            % if course.catalog_visibility=="both":
+            <li class="courses-listing-item">
+                <%include file="../course.html" args="course=course" />
+            </li>
+            % endif
         %endfor
       </ul>
     </section>
