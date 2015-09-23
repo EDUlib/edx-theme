@@ -47,3 +47,13 @@ edx-platform/lms/templates/wiki/includes/_notes/dwsync.xml
 lms.env_ori.json
 
 edx-platform/lms/templates/courseware/courses_old.html
+
+edx-platform/cms/static/sass/elements/_notes/dwsync.xml
+
+*.xml
+
+edx-platform/lms/static/images/edx-theme/_notes/dwsync.xml
+
+edx-platform/lms/static/images/edx-theme/_notes/dwsync.xml
+
+edx-platform/lms/static/images/social/_notes/dwsync.xml

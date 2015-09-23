@@ -226,10 +226,7 @@ h6 {font-size: 0.5em;}
 html, button, input, select, textarea, form#wiki_revision .CodeMirror, .instructions {font-family: $sans-serif !important;}
 
 
-header.global .user a.user-link {padding: 5px 10px;}
-header.global .user>.primary:last-child>a {padding: 5px 10px 11px;}
-header.global .user .dropdown-menu {top: 33px;}
-header.global .user .dropdown-menu::before {right: 8px;}
+header.global .user a.user-link {padding: 5px 12px 6px 10px !important;}
 
 
 
@@ -308,31 +305,23 @@ div.wrapper-footer nav.social-sharing, div.wrapper-footer nav.social-sharing ul 
 
 div.wrapper-footer nav.social-sharing ul li {display: inline;}
 
-.wrapper-footer footer .powered-by {
-    width: 150px !important;
-    margin-left: 20px;
-}
-
 //-----------------
 //  Page d'accueil
 //-----------------
 
+
 //  Redimensionnement de la bannière d'accueil
-section.home header {height: 275px;}
+section.home header.edulib {height: 150px;}
+section.home header.edulib .outer-wrapper {padding: 15px 0px;}
+section.home h1.edulib {margin: 30px 0px 0px;}
 
-.find-courses header.search, .university-profile header.search {height: 275px;}
+//  Décalement du titre par rapport à l'image
+.courses-container .courses .course .course-info {padding-top: 10px;}
+.highlighted-courses .courses, .find-courses .courses {padding: 0px 0px 15px !important;}
 
-section.home header div.outer-wrapper {padding-top: 110px;}
 
-.find-courses header.search .inner-wrapper, .university-profile header.search .inner-wrapper {padding-top: 110px;}
+//  Étiquette Nouveau
 
-//  Fixe une largeur minimale aux images des cours
-.highlighted-courses .courses .course .info .cover-image img, .find-courses .courses .course .info .cover-image img  {min-width: 355px;}
-
-//  Décalement de l'étiquette Nouveau
-.highlighted-courses .courses .course header.course-preview, .find-courses .courses .course header.course-preview {height: 60px;}
-.highlighted-courses .courses .course header.course-preview hgroup, .find-courses .courses .course header.course-preview hgroup {padding: 10px 10px;}
-.highlighted-courses .courses .course header.course-preview .info-link, .find-courses .courses .course header.course-preview .info-link {padding-top: 15px;}
 
 
 
@@ -346,25 +335,16 @@ section.home header div.outer-wrapper div.title {
 	float: none;
 }
 
-section.home header div.outer-wrapper div.title>hgroup {width: 100%;}
-section.home header div.outer-wrapper div.title>hgroup h1 {text-align: center;}
-
+section.home header.edulib div.outer-wrapper div.title>hgroup {width: 100%;}
+section.home header.edulib div.outer-wrapper div.title>hgroup h1 {text-align: center;}
 
 //-----------------
 //  Pages d'information
 //-----------------
 
-section.about p, section.about ul li, section.about ol li, section.about span {font: normal 1em/1.6em $serif;}
 
-section.container section.about h1 {margin-top: 1em;}
-
-section.about h3, section.about h4 {margin: 2em 0 1em 0;}
-
-section.about ul, section.about ol {margin-top: 0.25em;}
-
-section.about ul {list-style-type: disc;}
-section.about ol {list-style-type: decimal;}
-section.about ol ul {list-style-type: circle;}
+.course-info header.course-profile {padding-top: 50px !important;}
+.course-info .course-sidebar {padding-top: 40px;}
 
 
 //-----------------
@@ -384,26 +364,38 @@ section.about ol ul {list-style-type: circle;}
 //  Page d'accueil des cours
 //-----------------
 
-.course-info .container nav, .course-info section.outside-app nav {display: none;}
+//section.course-info .container nav, section.course-info section.outside-app nav {display: none;}
 
-.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro {
+section.course-info header.course-profile div.intro-inner-wrapper div.table a.media div.hero div.play-intro {
   border-radius: 0;
   border: 0px solid rgba(255,255,255,0.8);
-  height: 40px;
-  width: 40px;
-  margin-top: 0;
-  margin-left: 0;
-  position: absolute;
-  top: initial;
-  bottom: 0;
-  left: 0;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  background-image: -webkit-linear-gradient(-90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.50));
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.50));
 }
 
-.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
-  margin-left: 7px;
-  margin-top: 7px;
-  position: inherit;
-  top: 0;
-  left: 0;
+section.course-info header.course-profile div.intro-inner-wrapper div.table a.media div.hero div.play-intro::after {
+  margin-left: -0.4em;
+  color: rgba(0,0,0,0.75);
+  text-shadow: none;
+  font-size: 2.5em;
 }
 
+section.course-info header.course-profile div.intro-inner-wrapper div.table a.media div.hero div.play-intro,section.course-info header.course-profile div.intro-inner-wrapper div.table a.media div.hero div.play-intro {
+    background-image: -webkit-linear-gradient(-90deg, rgba(255,255,255,0.5), rgba(255,255,255,0.75));
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.75));
+}
+
+section.course-info header.course-profile div.intro-inner-wrapper div.table a.media div.hero div.play-intro::after,section.course-info header.course-profile div.intro-inner-wrapper div.table a.media div.hero div.play-intro::after {color: rgba(0,0,0,1);}
+
+//-----------------
+// Bordure des pages de sommaire des cours
+//-----------------
+
+//section.course-info section.container section.course-sidebar > section.course-summary {
+section.course-info section.course-sidebar>section.course-summary {
+    border-top: 1px solid #1d86df;
+}
